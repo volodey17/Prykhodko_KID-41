@@ -1,7 +1,10 @@
-# Prykhodko_KID-41
-Репозеторій з лабораторними роботами
-та практичними завданнями з дисціпліни
-"WEB-технології та WEB-інтерфейс"
+# Репозиторій "web_tech_project
 
-Посилання на WEB-сторінку:
-https://github.com/volodey17/web_tech_project/settings/pages#:~:text=https%3A//volodey17.github.io/web_tech_project/
+Цей репозеторій створений для контролю
+за виконанням лабораторних робіт
+та практичних завдань з дисципліни
+**"WEB-технології та WEB-інтерфейс"**
+
+Посилання на web-сторінку, яка 
+базується на коді з цього репозиторію:
+[СТОРІНКА GitHub](https://volodey17.github.io/web_tech_project/)
