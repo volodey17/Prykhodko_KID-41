@@ -1,137 +1,77 @@
-<!--
-    Декларація типу документа (HTML5),
-    вона не чутлива до регістру
--->
 <!DOCTYPE html>
-<!-- 
-    HTML - кореневий елемент(контейнер) документа,
-    поза його межами - браузер не обровляє код 
-    lang - Мова та діалект всього документа
--->
-<html lang="uk-UA">  
-    <!--
-        HEAD містить мета-інформацію про документ, таку
-        як заголовок сторінки, підключення стилів
-        CSS, мета-теги і іншу інформацію
-    -->
-    <head>
-        <meta charset="UTF-8">
-        <!--
-            <meta name="description" content="Це опис сторінки">
-            <meta name="keywords" content="ключові слова, для, пошукових систем"> 
-            (!!"keywords" - не актуально з 2009р)
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        -->
-        <title> ЗАГОЛОВОК СТОРІНКИ </title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<html lang="uk-UA">
+  <head>
+    <meta charset="utf-8">
+    <title>Сторінка Приходько Володимира</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <!--
-        BODY - основний вміст сторінки, який
-        відображається на екрані користувача
-    -->
-    <body>
-        <h1 ang="uk">Це заголовок</h1>
-        <p>Це абзац тексту.</p>
+  <body>
+    <!-- Here is our main header that is used across all the pages of our website -->
 
-        <!--
-            DIV - контейнер для групування та розділення
-            елементів на веб-сторінці. Він не вносить
-            пеціального форматування або семантики,
-            але надає можливість застосовувати CSS
-            стилі, додавати класи і ідентифікатори,
-        -->
-        <div id="container">
-            <h1>Заголовок сторінки</h1>
-            <p>Це абзац тексту.</p>
-            <ul>
-                <li>Пункт списку 1</li>
-                <li>Пункт списку 2</li>
-            </ul>
-        </div>
+    <header>
+      <h1>Header</h1>
+    </header>
 
-        <!--
-            Форматирование текста
-        -->
-        <h1>Це заголовок рівня 1</h1>
-        <h2>Це заголовок рівня 2</h2>
-        <p>Це абзац тексту.</p>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+      <form>
+        <input type="search" name="q" placeholder="Search query">
+        <input type="submit" value="Go!">
+      </form>
+    </nav>
+
+    <!-- Here is our page's main content -->
+    <main>
+
+      <!-- It contains an article -->
+      <article>
+        <h2>Article heading</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+
+        <h3>subsection</h3>
+
+        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+
+        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+
+        <h3>Another subsection</h3>
+
+        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+
+        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+      </article>
+
+      <!-- the aside content can also be nested within the main content -->
+      <aside>
+        <h2>Related</h2>
+
         <ul>
-            <li>Перший елемент</li>
-            <li>Другий елемент</li>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
         </ul>
-        <ol>
-            <li>Перший пункт</li>
-            <li>Другий пункт</li>
-        </ol>
-        <!--
-            <b> - Bold text
-            <strong> - Important text
-            <i> - Italic text
-            <em> - Emphasized text
-            <mark> - Marked text
-            <small> - Smaller text
-            <del> - Deleted text
-            <ins> - Inserted text
-            <sub> - Subscript text
-            <sup> - Superscript text
-        -->
+      </aside>
 
-        <!--
-            <a href="https://www.example.com">Посилання на приклад</a>
-            <a href="/products.html">Наші товари</a>
-            <a href="mailto:info@example.com">Напишіть нам</a>
-        -->
+    </main>
 
-        <!--
-            Відкрити посилання у новій вкладці:
+    <!-- And here is our main footer that is used across all the pages of our website -->
 
-            <a href="https://www.example.com"
-                target="_blank">Посилання на приклад</a>
-            
-            rel - відносний атрибут в HTML тегу <a>
-            використовується для визначення відносин між поточним
-            документом (сторінкою) та документом, на який вказує
-            посилання. 
-               
-            <a href="https://www.example.com" rel="noopener
-                noreferrer">Посилання на приклад</a>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
 
-            "noopener" і "noreferrer": Ці значення допомагають
-            захистити безпеку користувачів. Вони вказують браузеру
-            не передавати важливу інформацію, таку як cookies, при
-            переході за посиланням.
-        -->
-        
-        <!--
-            Завантажити файл.
-            Якщо браузер вміє обробляти такий тип файлів,
-            то він його спробує відкрити.
-
-            <a href="cv.pdf" download>Завантажити резюме</a>
-        -->
-        
-        <!--
-            SPAN - використовується для
-            визначення невеличкого фрагмента тексту
-            або для групування і застосування стилів до
-            частини тексту, які розташовані всередині нього.
-        
-            <p>Це <span style="color: red;">червоний текст</span>.</p>
-            <p>Це <span class="important">важливий текст</span>.</p> 
-        -->
-
-<!--
-    Додаємо код javascript в html 
-    <script>
-        function sayHello() {
-        alert('Привіт, світе!');
-        }
-        
-    </script>
-
-    Додаємо лінк на файл с кодом javascript
-        <script src="script.js"></script>
--->
-    </body>
+  </body>
 </html>
