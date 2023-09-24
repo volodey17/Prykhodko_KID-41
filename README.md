@@ -4,4 +4,4 @@
 та практичних завдань з дисципліни **"WEB-технології та WEB-інтерфейс"**.
 
 Посилання на головну web-сторінку:
-[Головна сторінка цього репозиторію](https://volodey17.github.io/web_tech_project/)
+[Головна сторінка](https://volodey17.github.io/web_tech_project/)
