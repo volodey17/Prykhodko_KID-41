@@ -24,7 +24,7 @@ html, body {
   
   /* || typography */
   
-  p, li, h1, h2, h3, input {
+  p, li, h1, h2, h3, input, table {
     font-family: 'Nunito', sans-serif;
     line-height: 1;
     color: rgb(88, 87, 87);
@@ -127,6 +127,18 @@ html, body {
   
   article {
     flex: 4;
+  }
+
+  table, th, td  {
+    font-size: 1.5rem;
+    /*margin: 1%;*/
+    padding: 5px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+  }
+
+  th {
+    background-color: rgba(250, 217, 0, 0.8);
   }
   
   .left {
