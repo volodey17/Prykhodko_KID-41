@@ -7,13 +7,10 @@ html, body {
   
   html {
     font-size: 10px;
-    /* задаёт путь до файла */
     background-image: url('../img/background2.jpg');
-    /* задает стартовое положение изображения на странице */
     background-position: center center;
     /* определяет размер изображения на странице */
     background-size: cover;
-    /* свойство устанавливает, будет ли повторяться изображение и каким образом */
     background-repeat: no-repeat;
     /* cвойство определяет, будет ли фоновое изображение прокручиваться 
   вместе с остальной частью страницы или будет фиксированным */
@@ -146,12 +143,22 @@ html, body {
     padding-bottom: 5px;
   }
   aside a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: rgb(88, 87, 87);
   }
   
   footer {
+    display: flex;
     padding: 1%;
     margin-top: 10px;
+  }
+
+  footer div {
+    display: inline-block;
+    flex: 1;
+  }
+
+  footer p {
+    font-size: 1.5rem;
   }
