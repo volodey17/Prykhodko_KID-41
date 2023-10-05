@@ -1,190 +1,183 @@
-/* || General setup */
-
 html, body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
   
-  html {
-    font-size: 10px;
-    background-image: url('../img/background2.jpg');
-    background-position: center center;
-    /* определяет размер изображения на странице */
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+html {
+  font-size: 10px;
+  background-image: url('../img/background2.jpg');
+  background-position: center center;
+  /* определяет размер изображения на странице */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* cвойство определяет, будет ли фоновое изображение прокручиваться 
   вместе с остальной частью страницы или будет фиксированным */
-    background-attachment: fixed;
-  }
+  background-attachment: fixed;
+}
   
-  body {
-    width: 70%;
-    margin: 0 auto;
-  }
+body {
+  width: 70%;
+  margin: 0 auto;
+}
   
-  /* || typography */
-  
-  p, li, h1, h2, h3, input, table {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1;
-    color: rgb(88, 87, 87);
-  }
-  
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    /*color: rgb(88, 87, 87);*/
-    /*text-shadow: 2px 2px 10px #000000;*/
-  }
-  
-  h2 {
-    font-size: 2rem;
-    text-align: left;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  h3 {
-    font-size: 1.8rem;
-    text-align: left;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  p {
-    font-size: 1.6rem;
-    line-height: 1;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  /* || header layout */
-  
-  nav, article, aside, footer {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    /*padding: 1%;*/
-  }
-  
-  nav {
-    /*height: 50px;*/
-    background: rgba(88, 87, 87, 0.8);
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  nav ul {
-    padding: 5px;
-    list-style-type: none;
-    flex: 1; /*изменить на 2, если поиск будет в nav*/
-    display: flex;
-  }
+/*-------------------------------*/
+a, p, li, h1, h2, h3, table {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.2;
+  color: rgb(88, 87, 87);
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+} 
+h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+} 
+h3 {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+} 
+p {
+  font-size: 1.6rem;
+  margin-left: 30px;
+  margin-right: 30px;
+}  
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
 
-  nav li {
-    display: inline;
-    text-align: center;
-    flex: 1;
-  }
-  
-  nav a {
-    display: inline-block;
-    font-size: 2rem;
-    /*text-transform: uppercase;*/
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
+ /*-------------------------------*/
+nav, article, aside, footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+}
+nav {
+  background: rgba(88, 87, 87, 0.8);
+  display: flex;
+  margin-bottom: 10px;
+}  
+nav ul {
+  padding: 5px;
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+}
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}  
+nav a {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255);
+}
+nav a:after {
+  position: relative;
+  background-color: rgba(250, 217, 0, 1);
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+nav a:hover:after {
+  width: 100%;
+}
 
-  /*стиль поиска, пока не нужен
-  nav form {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 2em;
-  }
+/*-------------------------------*/
+main {
+  display: flex;
+}
   
-  input {
-    font-size: 1.6rem;
-    height: 32px;
-  }
-  
-  input[type="search"] {
-    flex: 3;
-  }
-  
-  input[type="submit"] {
-    flex: 1;
-    margin-left: 1rem;
-    background: #333;
-    border: 0;
-    color: white;
-  }
-  */
-  /* || main layout */
-  
-  main {
-    display: flex;
-  }
-  
-  article {
-    flex: 4;
-  }
+article {
+  flex: 4;
+  padding: 1%;
+}
+.img_article_left {
+  float: left;
+  margin: 0 30px 30px 0;
+  width: 30%;
+  height: 30%;
+}
+article a {
+  text-decoration: underline;
+}
+article a:hover {
+  background: rgba(250, 217, 0, 0.8);
+}
 
-  table, th, td  {
-    font-size: 1.5rem;
-    border: 1px solid grey;
-    border-collapse: collapse;
-  }
+table, th, td  {
+  font-size: 1.5rem;
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+table {
+  width: calc(100% - 60px);
+  margin: 30px;
+}
+th {
+  padding: 5px;
+}
+td {
+  padding: 5px;
+  text-align: center;
+}
+thead {
+  background-color: rgba(250, 217, 0, 0.8);
+}
+
+/*-------------------------------*/
+aside {
+  flex: 1;
+  padding: 1%;
+  margin-left: 10px;
+  background-color: rgba(250, 217, 0, 0.8);
+}
+aside ul {
+  padding-inline-start: 20px;
+}
+aside li {
+  padding-bottom: 5px;
+}
+aside a {
+ font-size: 1.5rem;
+}
+aside a:hover {
+ text-decoration: underline;
+}
   
-  table {
-    width: calc(100% - 60px);
-    margin: 30px;
-  }
-
-  th {
-    padding: 5px;
-    background-color: rgba(250, 217, 0, 0.8);
-  }
-
-  td {
-    padding: 5px;
-    text-align: center;
-  }
-
-  .left {
-    float: left;
-    margin: 0 1em 1em 0;
-  }
-  aside {
-    flex: 1;
-    padding: 1%;
-    margin-left: 10px;
-    background-color: rgba(250, 217, 0, 0.8);
-  }
-  
-  aside ul {
-    padding-inline-start: 20px;
-  }
-  aside li {
-    padding-bottom: 5px;
-  }
-  aside a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: rgb(88, 87, 87);
-  }
-  
-  footer {
-    display: flex;
-    padding: 1%;
-    margin-top: 10px;
-  }
-
-  footer div {
-    display: inline-block;
-    flex: 1;
-  }
-
-  footer p {
-    font-size: 1.5rem;
-  }
+/*-------------------------------*/
+footer {
+  display: flex;
+  padding: 1%;
+  margin-top: 10px;
+}
+footer div {
+  display: inline-block;
+  flex: 1;
+}
+footer p {
+  font-size: 1.5rem;
+}
+.img_left {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 3em;
+  height: 3em;
+}
+footer a {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+footer a:hover {
+  background: rgba(250, 217, 0, 0.8);
+}
