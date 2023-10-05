@@ -14,63 +14,27 @@
   <body>
     <!-- вступний контент -->
     <header>
-      <h1>Лабораторні роботи</h1>
+      <h1>Лабораторна робота №1</h1>
     </header>
     
-    <!-- панель навигації -->
-    <nav>
-      <ul>
-        <li><a href="../index.html">Головна</a></li>
-        <li><a href="../about/about.html">Про мене</a></li>
-        <li><a href="../practical/practical.html">Практичні</a></li>
-        <li><a href="./labs.html">Лабораторні</a></li>
-      </ul>
-    </nav>
-
     <!-- основний вміст документа -->
     <main>
-      <!-- самостійна частина документа, стаття -->
-      <article>
-        <h2>Виконані лабораторні роботи:</h2>
-        <p> (цей список оновлюється...)</i></p>
-      </article>
-
-      <!-- додатковий частина, побічно пов'язана з основним вмістом документа -->
-      <aside>
-        <h2>Корисні посилання:</h2>
-        <ul>
-          <li><a href="#">Тестове посилання1</a></li>
-          <li><a href="#">Тестове посилання2</a></li>
-          <li><a href="#">Тестове посилання3</a></li>
-          <li><a href="#">Тестове посилання4</a></li>
-          <li><a href="#">Тестове посилання5</a></li>
-        </ul>
-      </aside>
+      <div class="box">
+        <div class="form">
+        <form action="" method="POST">
+          <fieldset>
+            <legend>Дані для реєстрації</legend>
+            <label>Ім'я:<br><input type="text" name="firstname"></label><br><br>
+            <label>Прізвище:<br><input type="text" name="lastname"></label><br><br>
+            <label>Email:<br><input type="email" name="email"></label><br><br>
+            <label>Пароль:<br><input type="password" name="pass1"></label><br><br>
+            <label>Підтвердження пароля:<br><input type="password" name="pass2"></label><br>
+          </fieldset>
+          <input type="submit">
+          <input type="button" value="Завершити">
+        </form>
+      </div>
+      </div>
     </main>
-
-    <!-- Нижній колонтикул -->
-    <footer>
-      <div>
-        <p>Сайт розробив:<br>Приходько В., 2023рік.</p>
-      </div>
-
-      <div>
-        <p>
-          <img class="img_left"
-            src="../img/github.webp" 
-            alt="github">
-          Посилання на акаунт github: <a href="https://github.com/volodey17">volodey17</a>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img class="img_left"
-            src="../img/sololearn.png"
-            alt="sololearn">
-          Посилання на акаунт sololearn: <a href="https://www.sololearn.com/profile/4921321">volodey17</a>
-        </p>
-      </div>    
-    </footer>
   </body>
 </html>
