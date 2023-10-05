@@ -193,12 +193,6 @@ footer a:hover {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
 }
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 .text-field {
   margin-bottom: 2rem;
@@ -246,8 +240,19 @@ footer a:hover {
 }
 
 .button {
-  background:rgba(250, 217, 0, 0.8);
+  background:rgba(255, 255, 255, 0.8);
   width: 50%;
   margin: 0 auto;
   display: block;
+}
+.button:hover {
+  background:rgba(250, 217, 0, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.info a {
+  text-decoration: underline;
+}
+.info a:hover {
+  background: rgba(250, 217, 0, 0.8);
 }
