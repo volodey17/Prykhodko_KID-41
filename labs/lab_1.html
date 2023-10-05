@@ -20,21 +20,32 @@
     <!-- основний вміст документа -->
     <main>
       <div class="box">
-        <div class="form">
-        <form action="" method="POST">
-          <fieldset>
-            <legend>Дані для реєстрації</legend>
-            <label>Ім'я:<br><input type="text" name="firstname"></label><br><br>
-            <label>Прізвище:<br><input type="text" name="lastname"></label><br><br>
-            <label>Email:<br><input type="email" name="email"></label><br><br>
-            <label>Пароль:<br><input type="password" name="pass1"></label><br><br>
-            <label>Підтвердження пароля:<br><input type="password" name="pass2"></label><br>
-          </fieldset>
-          <input type="submit">
-          <input type="button" value="Завершити">
+        <form action="https://webhook.site/dfcf303d-5f49-4d56-b20d-9f474ff04301" 
+          method="POST"
+          target="_blank">
+            <div class="text-field">
+              <p>Дані для реєстрації:<br></p>
+
+              <label class="text-field__label">Ім'я:<br>
+                <input class="text-field__input"type="text" name="firstname" required></label><br>
+
+              <label class="text-field__label">Прізвище:<br>
+                <input class="text-field__input" type="text" name="lastname" required></label><br>
+
+              <label class="text-field__label">Email:<br>
+                <input class="text-field__input" type="email" name="email" 
+                placeholder="example@dut.edu" required></label><br>
+
+              <label class="text-field__label">Пароль:<br>
+                <input class="text-field__input" type="password" name="pass1" required></label><br>
+
+              <label class="text-field__label">Підтвердження пароля:<br>
+                <input class="text-field__input" type="password" name="pass2" required></label><br><br>
+
+              <input class="text-field__input button" type="submit">
+            </div>
         </form>
-      </div>
-      </div>
+       </div>
     </main>
   </body>
 </html>
