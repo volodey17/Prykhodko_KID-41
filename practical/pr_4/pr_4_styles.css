@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #0f0f0f;
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+    
+header {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #386641;
+}
+    header div{     
+        display: inline-flex;
+        align-items: center;
+        margin: 5px 20px 5px 20px;
+    }
+    .name{
+        color: #F2E8CF;
+    }
+    header input{
+        height: 6vh;  
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px 0 5px;
+        border-radius: 10px;
+        background-color: #F2E8CF;
+        font-family: inherit;
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 400;
+    }
+    header button{
+        height: 6vh;
+        margin: 0 5px 0 5px;  
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+        background-color: #F2E8CF;
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 400;
+    }
+/*-------------------------------------------------*/
+    main{
+        display: flex;
+        flex-direction: row;
+
+    }
+        nav{
+            flex: 1;
+            
+            height: 90vh;
+            position: sticky;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            display: flex;
+            background-color: #6a994e;
+            flex-direction: column;
+        }
+            nav div{
+                margin: 5px 20px 5px 20px;
+                background-color:#F2E8CF;
+            }
+
+            footer{
+                margin: 5px 20px 5px 20px;
+                background-color: #ebd08e;
+            }
+/*------------------------------------------------*/
+        .container {
+            flex: 5;
+        }
+            aside{
+                width: 100%;
+                height: 10vh;
+                position: relative;
+                
+                display: inline-flex;
+                justify-content: flex-start;
+                background-color: #a7c957;
+            }
+                aside div{
+                    display: inline-flex;
+                    align-items: center;
+
+                    background-color: #F2E8CF;
+                    margin: 10px 10px;
+                    padding: 0 10px 0 10px;
+                    border-radius: 10px;
+                }
+/*-----------------------------------------------*/
+            article{
+                width: 100%;
+                height: 80vh;
+                position: sticky;
+                overflow-x: hidden;
+                overflow-y: auto;
+ 
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                background-color: #2B2D42;
+            }
+                article div{    
+                    width: 24vw;
+                    height: 14vw;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    background-color: #F2E8CF;
+                    margin: 10px 20px 10px 20px;
+                    border-radius: 20px;
+                }
