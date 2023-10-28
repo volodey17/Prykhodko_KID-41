@@ -10,8 +10,8 @@ body {
 body {
     color: #0f0f0f;
     font-family: "Roboto","Arial",sans-serif;
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 14px;
+    line-height: 14px;
     font-weight: 400;
 }
     
@@ -20,18 +20,19 @@ header {
     height: 8vh;
     position: relative;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f7ffe1;
 }
     header div{     
-        display: inline-flex;
+        display: flex;
         align-items: center;
-        margin: 0 0 0 20px;
+        margin: 0 20px 0 20px;
     }
         .menu{
             height: 2.5vh;
+            
             /*margin: 0 10px 0 10px;*/
         }
         .logo{
@@ -61,8 +62,8 @@ header {
         justify-content: center;
 
         font-family: inherit;
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 1em;
+        line-height: 1em;
         font-weight: 400;
     }
     header button{
@@ -73,7 +74,11 @@ header {
     }
     header p{
         padding: 0 10px 0 10px;
-        font-size: 0.8rem;
+        font-size: 12px;
+    }
+    .no_back{
+        border: none;
+        background-color: transparent;
     }
 /*-------------------------------------------------*/
     main{
