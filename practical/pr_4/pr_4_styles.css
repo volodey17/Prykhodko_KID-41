@@ -17,51 +17,63 @@ body {
     
 header {
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     position: relative;
 
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #386641;
+    background-color: #f7ffe1;
 }
     header div{     
         display: inline-flex;
         align-items: center;
-        margin: 5px 20px 5px 20px;
+        margin: 0 0 0 20px;
     }
-    .name{
-        color: #F2E8CF;
-    }
-    header input{
+        .menu{
+            height: 2.5vh;
+            /*margin: 0 10px 0 10px;*/
+        }
+        .logo{
+            height: 3.5vh;
+            /*margin: 0 10px 0 10px;*/
+        }
+        .search{
+            width: 37vw;
+            border-radius: 5vh 0 0 5vh;
+            border: 1px solid #d3d3d3;
+        }
+        .search_btm{
+            width: 4vw;
+            border-radius: 0 5vh 5vh 0;
+            border: 1px solid #d3d3d3;
+            background: url(img/srch.png) no-repeat center #f8f8f8;
+            background-size: 2.5vh;
+        }
+        .mic, .dot, .person, .star{
+            width: 3.5vh;
+        }   
+    header input, header button{
         height: 6vh;  
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 5px 0 5px;
-        border-radius: 10px;
-        background-color: #F2E8CF;
-        font-family: inherit;
+
         font-family: inherit;
         font-size: 1rem;
         line-height: 1rem;
         font-weight: 400;
     }
     header button{
-        height: 6vh;
-        margin: 0 5px 0 5px;  
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0 10px 0 10px;  
 
-        border-radius: 10px;
-        background-color: #F2E8CF;
-        font-family: inherit;
-        font-size: 1rem;
-        line-height: 1rem;
-        font-weight: 400;
+        border-radius: 6vh;
+        border: 1px solid #d3d3d3;
+    }
+    header p{
+        padding: 0 10px 0 10px;
+        font-size: 0.8rem;
     }
 /*-------------------------------------------------*/
     main{
@@ -72,50 +84,77 @@ header {
         nav{
             flex: 1;
             
-            height: 90vh;
+            height: 92vh;
             position: sticky;
             overflow-x: hidden;
             overflow-y: auto;
 
             display: flex;
-            background-color: #6a994e;
+            background-color: #e2ffda;
             flex-direction: column;
         }
             nav div{
-                margin: 5px 20px 5px 20px;
-                background-color:#F2E8CF;
+                display: flex;
+                flex-direction: column;
+                margin: 5px 20px 5px 25px;
+                padding: 5px 0 5px 0;
+                /*background-color:#F2E8CF;*/
+                border-bottom: 1px solid #d3d3d3;
             }
+            nav div a{
+                display: flex;
+                align-items: center;
+                margin: 10px 0 10px 0;
 
-            footer{
-                margin: 5px 20px 5px 20px;
-                background-color: #ebd08e;
+                text-decoration: none;
+                color: #0f0f0f;
             }
+            nav div a p{
+                margin: 0 0 0 20px;
+            }
+            footer{
+                margin-top: 10px;
+            }
+            footer p{
+                margin: 2px 20px 2px 25px;
+                /*background-color: #ebd08e;*/
+            }
+           
 /*------------------------------------------------*/
         .container {
             flex: 5;
         }
             aside{
                 width: 100%;
-                height: 10vh;
+                height: 8vh;
                 position: relative;
                 
                 display: inline-flex;
+                align-items: center;
                 justify-content: flex-start;
-                background-color: #a7c957;
+                background-color: #defffd;
             }
                 aside div{
-                    display: inline-flex;
+                    display: flex;
                     align-items: center;
 
-                    background-color: #F2E8CF;
-                    margin: 10px 10px;
+                    height: 6vh;
+                    background-color: #f8f8f8;
+                    margin: 0 0 0 20px;
                     padding: 0 10px 0 10px;
-                    border-radius: 10px;
+                    border-radius: 8px;
+                }
+                aside div p{
+                    font-weight: 600;
+                }
+                aside div:first-child{
+                    color: white;
+                    background-color: #0f0f0f;
                 }
 /*-----------------------------------------------*/
             article{
                 width: 100%;
-                height: 80vh;
+                height: 84vh;
                 position: sticky;
                 overflow-x: hidden;
                 overflow-y: auto;
@@ -123,7 +162,7 @@ header {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                background-color: #2B2D42;
+                background-color: #ffffff;
             }
                 article div{    
                     width: 24vw;
@@ -133,7 +172,7 @@ header {
                     align-items: center;
                     justify-content: center;
                     
-                    background-color: #F2E8CF;
-                    margin: 10px 20px 10px 20px;
-                    border-radius: 20px;
+                    background-color: rgb(119, 252, 223);
+                    margin: 20px 20px 0 20px;
+                    border-radius: 15px;
                 }
