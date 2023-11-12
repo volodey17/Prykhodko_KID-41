@@ -1,28 +1,25 @@
+/*скидаємо налаштування стилів*/
 * {
   margin: 0;
   padding: 0;
   /* З цією властивістю змінюється алгоритм розрахунку розмірів блоку.
-  border-box - задає розмірі з урахованням меж та полів.
+  border-box - розрахунок з урахованням меж та полів.
   Тепер width і height задають не розміри контенту, а БЛОКУ.
   Потрібне для адаптиву! */
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1vw;
   width: 100%;
   min-height: 100vh;
 }
 
 /* стилізуэмо усі контейнери*/
 [class^="box-"] {
-  /*background-color: skyblue;*/
-  /* Размещаем контейнеры по центру */
   display: grid;
-  place-items: center;
-  border-color: gray;
-  border-style: solid;
+  border: 1px solid gray;
 }
 
 /*батьківський контейнер*/
@@ -30,43 +27,38 @@ body {
   display: grid;
   /*стовпці - кількість та ширина*/
   grid-template-columns: repeat(4, 1fr);
+
   /*рядки - кількість та висота*/
   grid-template-rows: repeat(9, 1fr);
   /*скорочена форма
   grid-template: / ;*/
   height: 100vh;
 
-  /*відстань між контейнерами
-    Також є властивості column-gap, row-gap*
-  gap: 5px;
-  /*позіціювання grid-елементів всередині grid-контейнера
-  вздовж головної осі (X)*
-  justify-items : start/end/center/stretch;*
+  /*ВІДСТАНЬ між контейнерами*/
+  column-gap:;
+  row-gap:;
+  gap:;       /*Скорочена версія*/
 
-  *позіціювання grid-елементів всередині grid-контейнера
-  вздовж поперечної осі (Y)*
-  align-items: start/end/center/stretch;*/
+  /*ДЛЯ ЕЛЕМЕНТІВ всередині grid-контейнера*/
+  align-items:;       /*  вздовж осі Y */
+  justify-items:;     /*  вздовж осі X */
+  place-items:;       /*  скорочена версія Y X */
 
-  /*позіціювання самого гріда всередині грід-контейнера
-    7 можливих значень позіціювання (як у flexbox)*
-  justify-content: ;
-  align-content: ;*/
-  /* скорочено для X / Y
-  place-content: center / end;
-  */
+  /*ДЛЯ ГРІДА  всередині грід-контейнера*/
+  align-content:;     /* Y */
+  justify-content:;   /* X */
+  place-content:;    /* скорочена версія Y X */
   
+  /*ДЛЯ ОКРЕМОГО ЕЛЕМЕНТА*/ 
+  align-self:;      /* вздовж осі Y*/ 
+  justify-self:;    /* вздовж осі X */
+  place-self:;      /* скорочена версія Y X */
+
   /*шаблон сітки батьківського контейнера,
     посилається на "grid-area" дочірнього контейнера*/
   /*grid-template-areas:
     /* тут визначаємо імена *
     "head head head head"
-    "todo  day  day  day"
-    "todo  day  day  day"
-    "todo  day  day  day"
-    "todo  day  day  day"
-    "todo  day  day  day"
-    "todo  day  day  day"
-    "todo  day  day  day"
     "todo  day  day  day";*/
 }
 /*Додаємо адаптивність*/
@@ -83,62 +75,116 @@ body {
   .box-header {
     display: grid;
     background-color: greenyellow;
+    padding: 0 23px 5px 20px;
     /* посилаємося на імена з сітки батьківського контейнера */
     /*grid-area: head;*/
     /*налаштуавння, як дочірнього*/
     grid-column: 1 / span 4;
     grid-row: 1 / span 1;
+    gap: 4%;
+    
 
     /*налаштуавння, як батьківського контейнера
       для наступних емлементів*/
-    grid-template-columns: repeat(4, 1fr);
-      /*grid-template-rows: repeat(2, 1fr);
-    /* вздовж осі X
-    justify-self: center;
-    /* вздовж осі Y
-    align-self: end;
-    /* скорочено 
-    place-self: center / end;s
-    */
+    grid-template-columns: 1fr 1fr 1.2fr 0.8fr;
+    /*grid-template-rows: repeat(2, 1fr);*/ 
+    white-space: nowrap; /* вимикаємо перенесення слів */
   }
+
   .header-1 {
+    justify-self: center;
+    align-self: end;
+    transform: translate(0 , 15px);
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5em;
+    /*font-weight: bold; */
+  }
+
+  .header-2, .header-3 {
     display: grid;
     align-self: end;
-    transform: translate(0, 10px);
+    column-gap: 5px;
+    
+    grid-template-columns: auto 1fr;
 
-    font-size: 3.5rem; 
+    font-size: 1em;
+    font-weight: bold; 
   }
-  .header-2 {
-    display: grid;
-    align-self: end;
+    .header-2>input, .header-3>input {
+      background: transparent;  /* прозорий фон */
+      outline: none; /* вимикаємо рамки активності поля input */
+      border: none; /* вимикаємо рамки навкого поля input */
+      border-bottom: 2px solid gray;
+      margin-bottom: 5px;
 
-    font-size: 1.5rem;
-  }
-  .header-3 {
-    display: grid;
-    align-self: end;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+    }
 
-    font-size: 1.5rem;
-  }
   .header-4 {
     display: grid;
-    
-    align-self: end;  
+    justify-items: stretch;
+    align-self: end;
+    row-gap: 10px;
+    column-gap: 10px;
 
-    font-size: 1.5rem;
+    margin-bottom: 7px;
+
+    font-size: 1em;
+    font-weight: bold;
   
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr 1fr;
   }
+    .header-4>p {
+      text-align: right;
+    }
+    .header-4>input {
+      width: 1.4em;
+      justify-self: left;
+    }
 /*-------------------------------------------------------------*/
 .box-todo {
   display: grid;
   background-color: yellow;
+  padding: 0 25px 10px 30px;
   /*grid-area: todo;*/
   grid-column: 1 / span 1;
   grid-row: 2 / span 8;
 
-  grid-template-rows: repeat(22, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
+  .box-todo>p {
+    padding-top: 5px;
+    align-self: center;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .box-todo>p:first-child {
+    text-align: right;
+  }
+  .box-todo>div {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    border-bottom: 2px solid gray;
+  }
+  .box-todo>div>input[type="checkbox"] {
+    width: 1.4em;
+    align-self: left;
+  }
+  .box-todo>div>input[type="text"] {
+    background: transparent;  /* прозорий фон */
+    outline: none; /* вимикаємо рамки активності поля input */
+    border: none; /* вимикаємо рамки навкого поля input */
+    margin-bottom: 5px;
+
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+  }
 /*--------------------------------------------------------------*/
 .box-day {
   display: grid;
@@ -150,12 +196,72 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-  .day-6 {
+  [class^="day-"] {
+    border: 1px solid gray;
     display: grid;
-    align-self: center;  
-
-    height: 100%;
-    width: 100%;
-
-    grid-template-rows: repeat(2, 1fr);
+    justify-items: stretch;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 10% 90%;
   }
+
+    [class^="day-"]>p {
+      align-self: center;
+      text-align: center;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    [class^="day-"]>input {
+      width: 1.4em;
+      justify-self: left;
+    }
+
+    [class^="day-"]>textarea {
+      margin: 10px 10px;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+  .days {
+    display: grid;
+    /*border: 1px solid gray;*/
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+    .day6 {
+      border: 1px solid gray;
+      display: grid;
+      justify-items: stretch;
+      grid-template-columns: 90% 10%;
+      grid-template-rows: 20% 80%;
+    }
+    .day7 {
+      border: 1px solid gray;
+      display: grid;
+      justify-items: stretch;
+      grid-template-columns: 90% 10%;
+      grid-template-rows: 20% 80%;
+    }
+    .days p {
+      align-self: center;
+      text-align: center;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    .days input {
+      width: 1.4em;
+      justify-self: left;
+    }
+    .days textarea {
+      margin: 10px 10px;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+    } 
