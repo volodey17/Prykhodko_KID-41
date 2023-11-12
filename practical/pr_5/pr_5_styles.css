@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* З цією властивістю змінюється алгоритм розрахунку розмірів блоку.
+  border-box - задає розмірі з урахованням меж та полів.
+  Тепер width і height задають не розміри контенту, а БЛОКУ.
+  Потрібне для адаптиву! */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* стилізуэмо усі контейнери*/
+[class^="box-"] {
+  /*background-color: skyblue;*/
+  /* Размещаем контейнеры по центру */
+  display: grid;
+  place-items: center;
+  border-color: gray;
+  border-style: solid;
+}
+
+/*батьківський контейнер*/
+.container {
+  display: grid;
+  /*стовпці - кількість та ширина*/
+  grid-template-columns: repeat(4, 1fr);
+  /*рядки - кількість та висота*/
+  grid-template-rows: repeat(9, 1fr);
+  /*скорочена форма
+  grid-template: / ;*/
+  height: 100vh;
+
+  /*відстань між контейнерами
+    Також є властивості column-gap, row-gap*
+  gap: 5px;
+  /*позіціювання grid-елементів всередині grid-контейнера
+  вздовж головної осі (X)*
+  justify-items : start/end/center/stretch;*
+
+  *позіціювання grid-елементів всередині grid-контейнера
+  вздовж поперечної осі (Y)*
+  align-items: start/end/center/stretch;*/
+
+  /*позіціювання самого гріда всередині грід-контейнера
+    7 можливих значень позіціювання (як у flexbox)*
+  justify-content: ;
+  align-content: ;*/
+  /* скорочено для X / Y
+  place-content: center / end;
+  */
+  
+  /*шаблон сітки батьківського контейнера,
+    посилається на "grid-area" дочірнього контейнера*/
+  /*grid-template-areas:
+    /* тут визначаємо імена *
+    "head head head head"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day"
+    "todo  day  day  day";*/
+}
+/*Додаємо адаптивність*/
+/*@media screen and (max-width: 640px) {
+  .container {
+      grid-template-areas:
+          "m m m m m m h h h h h h"
+          "c c c c c c c c c c c c"
+          "f f f f f f f f f f f f";
+  }
+}*/
+/*-------------------------------------------------------------*/
+/*дочірні контейнери*/
+  .box-header {
+    display: grid;
+    background-color: greenyellow;
+    /* посилаємося на імена з сітки батьківського контейнера */
+    /*grid-area: head;*/
+    /*налаштуавння, як дочірнього*/
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+
+    /*налаштуавння, як батьківського контейнера
+      для наступних емлементів*/
+    grid-template-columns: repeat(4, 1fr);
+      /*grid-template-rows: repeat(2, 1fr);
+    /* вздовж осі X
+    justify-self: center;
+    /* вздовж осі Y
+    align-self: end;
+    /* скорочено 
+    place-self: center / end;s
+    */
+  }
+  .header-1 {
+    display: grid;
+    align-self: end;
+    transform: translate(0, 10px);
+
+    font-size: 3.5rem; 
+  }
+  .header-2 {
+    display: grid;
+    align-self: end;
+
+    font-size: 1.5rem;
+  }
+  .header-3 {
+    display: grid;
+    align-self: end;
+
+    font-size: 1.5rem;
+  }
+  .header-4 {
+    display: grid;
+    
+    align-self: end;  
+
+    font-size: 1.5rem;
+  
+    grid-template-rows: repeat(2, 1fr);
+  }
+/*-------------------------------------------------------------*/
+.box-todo {
+  display: grid;
+  background-color: yellow;
+  /*grid-area: todo;*/
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 8;
+
+  grid-template-rows: repeat(22, 1fr);
+}
+/*--------------------------------------------------------------*/
+.box-day {
+  display: grid;
+  background-color: aqua;
+  /*grid-area: day;*/
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 8;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+  .day-6 {
+    display: grid;
+    align-self: center;  
+
+    height: 100%;
+    width: 100%;
+
+    grid-template-rows: repeat(2, 1fr);
+  }
