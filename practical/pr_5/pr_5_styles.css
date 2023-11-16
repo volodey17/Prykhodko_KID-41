@@ -181,6 +181,7 @@ body {
     align-self: left;
   }
   .box-todo>div>input[type="text"] {
+    transform: translate(0 , 6px);
     background: transparent;  /* прозорий фон */
     outline: none; /* вимикаємо рамки активності поля input */
     border: none; /* вимикаємо рамки навкого поля input */
