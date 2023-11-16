@@ -14,12 +14,13 @@ body {
   font-size: 1vw;
   width: 100%;
   min-height: 100vh;
+  background-color: #f7ffe1;
 }
 
 /* стилізуэмо усі контейнери*/
 [class^="box-"] {
   display: grid;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
 }
 
 /*батьківський контейнер*/
@@ -74,7 +75,7 @@ body {
 /*дочірні контейнери*/
   .box-header {
     display: grid;
-    background-color: greenyellow;
+    background-color: #f7ffe1;
     padding: 0 23px 5px 20px;
     /* посилаємося на імена з сітки батьківського контейнера */
     /*grid-area: head;*/
@@ -147,8 +148,12 @@ body {
     }
 /*-------------------------------------------------------------*/
 .box-todo {
+  margin-top: 4px;
   display: grid;
-  background-color: yellow;
+  background-color: #e2ffda;
+  border: 1px solid gray;
+  border-radius: 0 1vw 1vw 0;
+
   padding: 0 25px 10px 30px;
   /*grid-area: todo;*/
   grid-column: 1 / span 1;
@@ -188,7 +193,6 @@ body {
 /*--------------------------------------------------------------*/
 .box-day {
   display: grid;
-  background-color: aqua;
   /*grid-area: day;*/
   grid-column: 2 / span 3;
   grid-row: 2 / span 8;
@@ -197,7 +201,10 @@ body {
   grid-template-rows: repeat(2, 1fr);
 }
   [class^="day-"] {
+    margin: 4px 0 0 4px;
+    background-color: #defffd;
     border: 1px solid gray;
+    border-radius: 1vw;
     display: grid;
     justify-items: stretch;
     grid-template-columns: 90% 10%;
@@ -217,6 +224,10 @@ body {
     }
 
     [class^="day-"]>textarea {
+      background-color: #defffd;
+      resize: none;
+      outline-color: #b4cecc;
+      border: none;
       margin: 10px 10px;
       grid-column: 1 / span 2;
       grid-row: 2 / span 1;
@@ -234,14 +245,21 @@ body {
     grid-template-rows: 1fr 1fr;
   }
     .day6 {
+      margin: 4px 0 4px 4px;
+      border-radius: 1vw 1vw 0 0;
+      outline-color: #b4cecc;
       border: 1px solid gray;
+      background-color: #defffd;
       display: grid;
       justify-items: stretch;
       grid-template-columns: 90% 10%;
       grid-template-rows: 20% 80%;
     }
     .day7 {
+      margin: 0 0 0 4px;
+      border-radius: 0 0 1vw 1vw;
       border: 1px solid gray;
+      background-color: #defffd;
       display: grid;
       justify-items: stretch;
       grid-template-columns: 90% 10%;
@@ -258,6 +276,10 @@ body {
       justify-self: left;
     }
     .days textarea {
+      background-color: #defffd;
+      resize: none;
+      border: none;
+      outline-color: #b4cecc;
       margin: 10px 10px;
       grid-column: 1 / span 2;
       grid-row: 2 / span 1;

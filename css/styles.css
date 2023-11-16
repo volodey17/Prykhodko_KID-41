@@ -106,17 +106,28 @@ article {
   flex: 4;
   padding: 1%;
 }
-.img_article_left {
-  float: left;
-  margin: 0 30px 30px 0;
-  width: 30%;
-  height: 30%;
-}
+  .img_article_left {
+    float: left;
+    margin: 0 30px 30px 0;
+    width: 30%;
+    height: 30%;
+  }
+  .autor {
+    margin-left: 50px;
+  }
 article a {
   text-decoration: underline;
 }
 article a:hover {
   background: rgba(250, 217, 0, 0.8);
+}
+article li {
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-size: 1.4em;
+}
+.description{
+  margin-top: 5px;
 }
 
 table, th, td  {
@@ -243,13 +254,16 @@ footer a:hover {
   background:rgba(250, 217, 0, 0.8);
   /*background:rgba(255, 255, 255, 0.8);*/
   width: 50%;
-  margin: 0 auto;
+  margin: 10px auto;
   display: block;
+  
 }
 .button:hover {
   box-shadow: 0 0 0 0.3rem rgba(158, 158, 158, 0.25);
 }
-
+.info{
+  margin-top: 5px;
+}
 .info a {
   text-decoration: underline;
 }

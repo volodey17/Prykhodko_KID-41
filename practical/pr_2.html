@@ -14,60 +14,46 @@
   <body>
     <!-- вступний контент -->
     <header>
-      <h1>Практичне завдання №2</h1>
+      <h1>Практична робота №2</h1>
     </header>
-
-    <!-- панель навигації -->
-    <nav>
-      <ul>
-        <li><a href="../index.html">Головна</a></li>
-        <li><a href="../about/about.html">Про мене</a></li>
-        <li><a href="./practical.html">Практичні</a></li>
-        <li><a href="../labs/labs.html">Лабораторні</a></li>
-      </ul>
-    </nav>
-
+    
     <!-- основний вміст документа -->
     <main>
-        <!-- самостійна частина документа, стаття -->
-        <article>
-        <h2>Завдання практичної роботи:</h2>
-        <p>Довільно стилізувати веб-форму з 
-            <a href="../labs/lab_1.html">лабораторної роботи №1</a>.<br>
-            Задати для форми такі параметри:<br><br>
-            &nbsp&nbsp a. Колір фону та тексту<br>
-            &nbsp&nbsp b. Ширина та внутрішні відступи<br>
-            &nbsp&nbsp c. Закруглені кути<br>
-            &nbsp&nbsp d. Тінь<br>
-            &nbsp&nbsp e. Позиціювання<br>
-            <br><br></p>
-     
-        </article>
-    </main>
+      <div class="box">
+        <form action="https://webhook.site/dfcf303d-5f49-4d56-b20d-9f474ff04301" 
+          method="POST"
+          target="_blank">
+            <div class="text-field">
+              <p>Дані для реєстрації:<br></p>
 
-    <!-- Нижній колонтикул -->
-    <footer>
-        <div>
-          <p>Сайт розробив:<br>Приходько В., 2023рік.</p>
-        </div>
-  
-        <div>
-          <p>
-            <img class="img_left"
-              src="../img/github.webp" 
-              alt="github">
-            Посилання на акаунт github: <a href="https://github.com/volodey17">volodey17</a>
-          </p>
-        </div>
-  
-        <div>
-          <p>
-            <img class="img_left"
-              src="../img/sololearn.png"
-              alt="sololearn">
-            Посилання на акаунт sololearn: <a href="https://www.sololearn.com/profile/4921321">volodey17</a>
-          </p>
-        </div>
-      </footer>
-    </body>
+              <label class="text-field__label">Ім'я:<br>
+                <input class="text-field__input"type="text" name="firstname" required></label><br>
+
+              <label class="text-field__label">Прізвище:<br>
+                <input class="text-field__input" type="text" name="lastname" required></label><br>
+
+              <label class="text-field__label">Email:<br>
+                <input class="text-field__input" type="email" name="email" 
+                placeholder="example@dut.edu" required></label><br>
+
+              <label class="text-field__label">Пароль:<br>
+                <input class="text-field__input" type="password" name="pass1" required></label><br>
+
+              <label class="text-field__label">Підтвердження пароля:<br>
+                <input class="text-field__input" type="password" name="pass2" required></label><br>
+
+              <input class="text-field__input button" type="submit"><br>
+
+              <div class="info">
+                <a href="https://webhook.site/#!/dfcf303d-5f49-4d56-b20d-9f474ff04301/1b021f8d-eda3-44eb-95a9-47239f1543b5/1"
+                target="_blank">Перевірити відправлені дані</a>
+              </div>
+              <div class="info">
+                <a href="./practical.html">Повернутись до розділу "Практичні"</a>
+              </div>
+            </div>
+        </form>
+       </div>
+    </main>
+  </body>
 </html>
